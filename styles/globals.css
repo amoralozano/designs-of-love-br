@@ -1,9 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
 html,
 body {
   padding: 0;
+  overflow-x: hidden;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Lobster cursive, Helvetica Neue,
+    sans-serif;
 }
 
 a {
@@ -15,6 +28,22 @@ a {
   box-sizing: border-box;
 }
 
+.marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.marquee :hover {
+  animation-play-state: paused;
+}
+
+.lobster {
+  font-family: "Lobster", cursive;
+}
+
+.rowdies {
+  font-family: "Rowdies", cursive;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -22,5 +51,14 @@ a {
   body {
     color: white;
     background: black;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
