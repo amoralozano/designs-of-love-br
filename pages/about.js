@@ -123,7 +123,7 @@ const about = () => {
           <div className=" flex items-center justify-center w-[50%] h-full ">
             <Image
               src={mystory3}
-              className="w-[200px] h-[300px] md:w-[90%] md:h-[90%] bg-white rounded-lg shadow-lg shadow-black "
+              className="w-[200px] h-[300px] md:w-[90%] md:h-[90%] bg-white rounded-lg shadow-lg shadow-pink-300 "
             />
           </div>
           <div className=" flex items-center justify-center w-[50%] h-full">
@@ -156,7 +156,7 @@ const about = () => {
             className="w-[400px] h-[400px] ml-[15px] md:ml-[400px] md:w-[650px] md:h-[450px] bg-green-200 rounded-xl"
             src={mystory2}
           />
-          <div className=" relative w-[370px] h-[150px] mr-[10px] md:w-[700px] md:h-[280px] ml-[30px] md:ml-[370px] mt-[-50px] md:mt-[-50px] rounded-lg bg-white shadow-lg shadow-white">
+          <div className=" relative w-[370px] h-[150px] mr-[10px] md:w-[700px] md:h-[220px] ml-[30px] md:ml-[370px] mt-[-50px] md:mt-[-50px] rounded-lg bg-white shadow-lg shadow-white">
             <h1 className=" mt-[40px] text-gray-900 text-[12px] md:text-[20px] text-center md:text-left font-bold w-[90%] md:w-[85%] ml-[15px] md:ml-[20px] md:mt-[20px] md:py-3">
               This is test text. do not read you fool. i told you not to.This is
               test text. do not read you fool. i told you not to.This is test
@@ -182,7 +182,7 @@ const about = () => {
             className="w-[400px] h-[400px] ml-[15px] md:ml-[400px] md:w-[650px] md:h-[450px] bg-green-200 rounded-xl"
             src={mystory3}
           />
-          <div className="relative w-[370px] h-[150px] mr-[10px] md:w-[700px] md:h-[280px] ml-[30px] md:ml-[370px] mt-[-50px] md:mt-[-50px] rounded-lg bg-purple-300 shadow-lg shadow-purple-400">
+          <div className="relative w-[370px] h-[150px] mr-[10px] md:w-[700px] md:h-[220px] ml-[30px] md:ml-[370px] mt-[-50px] md:mt-[-50px] rounded-lg bg-purple-300 shadow-lg shadow-purple-400">
             <div>
               <h1 className=" mt-[40px] text-gray-900 text-[12px] md:text-[20px] text-center md:text-left font-bold w-[90%] md:w-[85%] ml-[15px] md:ml-[20px] md:mt-[20px] md:py-3">
                 This is test text. do not read you fool. i told you not to.This

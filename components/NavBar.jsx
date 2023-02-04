@@ -75,7 +75,7 @@ const NavBar = () => {
         </div>
         <div>
           <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+            className={`flex-1 justify-self-center pb-3 mt-4 md:block md:pb-0 md:mt-[30px] mb-[15px] md:mb-[0px] ${
               navbar ? "block" : "hidden"
             }`}
           >
@@ -90,6 +90,19 @@ const NavBar = () => {
                 <a href="/collection">Our Collection</a>
               </li>
             </ul>
+          </div>
+          {showCart && <Cart />}
+          <div class=" order-2 bg-transparent ml-[360px] md:ml-[400px] mt-[-70px] mb-[20px] md:mt-[-30px] md:h-[30px] w-[30px] md:w-[30px]">
+            <button
+              type="button"
+              className="text-[25px] ml-[0px] md:mt-[0px] text-black cursor-pointer relative ease-in-out bg-transparent"
+              onClick={() => setShowCart(true)}
+            >
+              <AiOutlineShopping />
+              <span className="absolute right-[-8px] text-[12px] text-center font-bold text-white bg-pink-600 shadow-md shadow-pink-500 w-[18px] h-[18px] rounded-[50%] mt-[-8px]">
+                {totalQuantities}
+              </span>
+            </button>
           </div>
         </div>
       </div>

@@ -51,8 +51,8 @@ const Cart = () => {
 
   return (
     // figure out a good color pattern to best match the website and design.
-    <div className=" bg-transparent fixed mt-[900px] md:mt-[740px]">
-      <div className="md:h-[100vh] md:w-[600px] bg-gradient-to-r from-gray-800 to-gray-900 float-right px-[40px] py-[10px] ml-[100px] md:ml-[150px] relative border-2 border-gray-900 shadow-md shadow-gray-900">
+    <div className="absolute md:fixed">
+      <div className="h-[100vh] md:h-[100vh] md:w-[600px] bg-gradient-to-l from-gray-900 to-black float-right px-[40px] py-[10px] mr-[-25px] md:ml-[-20px] mt-[-25px] md:mt-[-72px] relative border-2 border-gray-900 shadow-md shadow-gray-900">
         <button
           type="button"
           className="flex align-middle text-[18px] text-white font-bold cursor-pointer gap-[2px] ml-[-15px] bg-transparent"
@@ -65,13 +65,13 @@ const Cart = () => {
           </span>
         </button>
         {cartItems.length < 1 && (
-          <div className="w-[300px] ml-[50px] mt-[200px] bg-transparent align-center">
-            <div className="ml-[20px]">
+          <div className="w-[300px] ml-[50px] md:ml-[120px] mt-[200px] bg-transparent align-center">
+            <div className=" ml-[-40px] md:ml-[20px]">
               <AiOutlineShopping
-                className="text-pink-400 ml-[50px]"
+                className="text-pink-400 ml-[100px] md:ml-[50px]"
                 size={150}
               />
-              <h3 className=" lobster text-[25px] w-[100%] font-bold text-white">
+              <h3 className=" lobster text-[25px] text-center w-[100%] font-bold text-white">
                 Your Shopping Cart is Empty
               </h3>
             </div>
@@ -80,7 +80,7 @@ const Cart = () => {
               <button
                 type="button"
                 onClick={() => setShowCart(false)}
-                className=" rowdies w-[100%] max-w-[400px] px-[10px] py-[12px] rounded-lg font-bold text-[25px] mt-[1px] border-2 border-pink-400 bg-black text-pink-400 cursor-pointer"
+                className=" rowdies w-[100%] max-w-[400px] px-[10px] py-[12px] rounded-lg font-bold text-[25px] mt-[1px] ml-[-10px] border-2 border-pink-400 bg-black text-pink-400 cursor-pointer"
               >
                 Continue Shopping
               </button>
@@ -91,15 +91,15 @@ const Cart = () => {
           {cartItems.length >= 1 &&
             cartItems.map((item) => (
               <div
-                className=" bg-transparent flex gap-[10px] mt-[15px] mr-[50px]"
+                className=" relative bg-transparent flex gap-[10px] mt-[15px] md:mr-[50px]"
                 key={item._id}
               >
                 <img
                   src={urlFor(item?.image[0])}
-                  className="w-[150px] h-[130px] ml-[30px] mt-[10px] rounded-md bg-gray-400" // continue off here! try to finish this app by today;) you got this!!!
+                  className=" relative w-[150px] h-[130px] ml-[0px] mt-[10px] rounded-md bg-gray-400" // continue off here! try to finish this app by today;) you got this!!!
                 />
-                <div className="bg-transparent ml-[40px] mt-[20px]">
-                  <div className=" bg-transparent flex space-x-[80px] w-[200px]">
+                <div className=" ml-[0px] md:ml-[40px] mt-[20px]">
+                  <div className=" bg-transparent flex space-x-[60px] w-[200px]">
                     <h5 className=" rowdies text-[24px] font-bold text-pink-400">
                       {item.name}
                     </h5>
@@ -140,7 +140,7 @@ const Cart = () => {
         {cartItems.length >= 1 && (
           <div className="absolute bottom-[12px] bg-transparent mr-[120px] right-[5px] w-[70%] px-[0px] py-[65px]">
             <div className="flex ml-[120px] space-x-[10px] ">
-              <h3 className=" lobster text-[30px] text-purple-400  font-bold">
+              <h3 className=" lobster text-[30px] ml-[-10px] md:ml-[0px] text-purple-400  font-bold">
                 Subtotal:
               </h3>
               <h3 className=" lobster text-[28px] text-white font-bold">
@@ -150,7 +150,7 @@ const Cart = () => {
             <div className="w-[300px] m-auto">
               <button
                 type="button"
-                className="rowdies w-[100%] max-w-[400px] px-[10px] py-[12px] rounded-md text-[20px] mt-[10px] bg-black text-pink-400 border-2 border-pink-400 cursor-pointer font-bold"
+                className="rowdies w-[100%] max-w-[400px] px-[10px] py-[12px] rounded-md text-[20px] mt-[10px] ml-[60px] md:ml-[0px] bg-black text-pink-400 border-2 border-pink-400 cursor-pointer font-bold"
                 onClick={handleCheckout}
               >
                 Checkout
