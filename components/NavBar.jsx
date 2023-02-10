@@ -27,17 +27,17 @@ const NavBar = () => {
               <a href="/" class="flex items-center">
                 <Image
                   src={logo}
-                  className=" w-[60px] h-[60px] md:h-[75px] md:w-[75px]"
+                  className=" w-[60px] h-[60px] mr-[10px] md:mr-0 md:h-[75px] md:w-[75px]"
                   alt="Flowbite Logo"
                 />
-                <span class="self-center text-xl md:text-2xl font-semibold whitespace-nowrap dark:text-black">
+                <span class=" lobster self-center text-xl md:text-[28px] font-semibold whitespace-nowrap dark:text-black">
                   Designs of Love by Ruth
                 </span>
               </a>
             </div>
             <div className="md:hidden">
               <button
-                className="p-2  mt-[-10px] mr-[40px] md:mr-[0px] md:mt-[0px] text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                className="p-2  mt-[-10px] mr-[40px] md:mr-[0px] md:mt-[0px] text-pink-700 rounded-md outline-none focus:border-gray-400 focus:border"
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (

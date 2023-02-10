@@ -17,7 +17,7 @@ const collection = ({ products, products2 }) => {
       <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
         <div className="w-full bg-black">
           <br />
-          <h1 className="rowdies text-center text-[35px] text-white font-bold mb-[20px]">
+          <h1 className="rowdies text-left md:text-left text-[30px] ml-[20px] md:ml-[40px] md:text-[45px] text-white font-bold mb-[20px]">
             Original Collection
           </h1>
 
@@ -38,7 +38,7 @@ const collection = ({ products, products2 }) => {
       <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
         <div className="w-full bg-black">
           <br />
-          <h1 className="rowdies text-center text-[35px] text-white font-bold mb-[20px]">
+          <h1 className="rowdies text-left md:text-right text-[30px] ml-[20px] md:ml-0 md:text-[45px] md:mr-[110px] text-white font-bold mb-[20px]">
             Summer Collection
           </h1>
 
@@ -53,7 +53,7 @@ const collection = ({ products, products2 }) => {
       <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
         <div className="w-full bg-black">
           <br />
-          <h1 className="rowdies text-center text-[35px] text-white font-bold mb-[20px]">
+          <h1 className="rowdies text-left md:text-left text-[30px] ml-[20px] md:ml-[40px] md:text-[45px] text-white font-bold mb-[20px]">
             Old Skool Collection
           </h1>
 

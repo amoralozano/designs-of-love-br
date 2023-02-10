@@ -2,28 +2,30 @@ import React from "react";
 import Link from "next/link";
 import { client } from "../lib/client";
 import { Product, DiscProduct, HeroBanner, Banner2 } from "../components"; // if app crashes look into making .babelrc file.
-// to add any pages add to this directore of pages and when you do the link do <Link href="/about" >Button or whatever</Link>
-//add links to the nav bar but it works
-// navbar is here for now for current placement of work
 
-// continue off on making the product connect woith sanity and style the fuck out of it:)
+// to add any pages add to this directore of pages and when you do the link do <Link href="/about" >Button or whatever</Link>
+
+// try to move the tittles to the left and right side and see if they look better that way!
+// continue styling the products page for the desktop view and see if any changes need to be made for mobile.
+// continue finishing off by finishing styling both mobile and desktop for the about page and collections page.
+// try changing banner2 to something that fits the site better both mobile and desktop.
 
 const Home = ({ products, discProducts, bannerData1, bannerData2 }) => {
   return (
-    <div className="bg-black mb-[100px]">
+    <div className=" bg-black mb-[100px]">
       <br />
-      <div className="flex justify-center items-center md:mt-[30px] w-full h-[200px]bg-transparent">
-        <h1 className="text-center lobster text-[60px] md:text-[110px] font-bold text-white">
+      <div className=" flex justify-center items-center md:mt-[30px] w-full h-[200px]bg-transparent">
+        <h1 className="text-center lobster text-[60px] mt-0 md:mt-[-60px] md:text-[110px] font-bold text-pink-300">
           Welcome To My Craft
         </h1>
       </div>
       <HeroBanner heroBanner={bannerData1.length && bannerData1[0]} />
       {console.log(bannerData1)}
-      <div className="bg-transparent text-center md:mt-[200px]">
+      <div className="bg-transparent text-left ml-[20px] md:ml-[200px] mt-[-50px] md:mt-[100px]">
         <h2 className=" text-[50px] md:text-[80px] lobster font-bold text-pink-600">
-          Top New Picks of The Month
+          Top Picks
         </h2>
-        <p className="text-white font-bold mt-[-5px] rowdies text-[25px] md:text-[30px]">
+        <p className="text-white font-bold mt-[-5px] rowdies text-[20px] md:text-[25px]">
           Prices may vary
         </p>
       </div>
@@ -34,8 +36,8 @@ const Home = ({ products, discProducts, bannerData1, bannerData2 }) => {
       </div>
       <Banner2 banner2={bannerData2.length && bannerData2[0]} />
       <br />
-      <div className="mt-[-120px] md:mt-0 md:ml-[100px] text-center w-full px-2 md:px-0 md:w-[90%] rounded-lg md:rounded-full h-[130px] md:h-[150px] bg-purple-400 shadow-lg shadow-purple-300">
-        <h1 className=" rowdies mt-[5px] md:mt-[15px] text-[20px] text-center md:text-[40px] text-black font-bold">
+      {/* <div className="mt-[-120px] md:mt-0 md:ml-[100px] text-center w-full px-2 md:px-0 md:w-[90%] rounded-lg md:rounded-full h-[130px] md:h-[150px] bg-purple-400 shadow-lg shadow-purple-300">
+        <h1 className=" rowdies mt-[5px] md:mt-[15px] text-[20px] text-center md:text-[40px] text-purple-700 font-bold">
           From Original Ideas to anything you can Imagine
         </h1>
         <Link href="/about">
@@ -46,14 +48,14 @@ const Home = ({ products, discProducts, bannerData1, bannerData2 }) => {
             Read Our Story
           </button>
         </Link>
-      </div>
+      </div> */}
 
-      <div className="bg-transparent text-center mt-[100px]">
+      <div className="bg-transparent text-left ml-[20px] md:ml-[200px] mt-[-50px] md:mt-[100px]">
         <h2 className=" text-[55px] md:text-[65px] font-bold lobster text-purple-600">
           On Sale
         </h2>
-        <p className="text-white font-bold mt-[-5px] rowdies text-[20px] md:text-[30px]">
-          These are deals you can't miss!
+        <p className="text-white font-bold mt-[-5px] rowdies text-[20px] md:text-[25px]">
+          Deals you can't miss!
         </p>
       </div>
       <div className="grid grid-cols-2 md:flex flex-wrap justify-center w-full mt-[20px] bg-transparent">

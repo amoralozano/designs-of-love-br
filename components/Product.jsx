@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { urlFor } from "../lib/client";
+
 // figure out how to get buy now to work but also not get an error like this one.
 
 // try to make products smaller for mobile.
@@ -27,7 +28,7 @@ const Product = ({ product: { image, name, slug, price, smallDetails } }) => {
           </p>
 
           <button className="bg-black border-2 border-pink-400  text-pink-400 ml-[10px] h-[40px] w-[150px] md:w-[200px] flex items-center justify-center rounded-lg text-[20px] mt-[10px]">
-            Add To Cart
+            View Product
           </button>
         </div>
       </Link>

@@ -1,12 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { urlFor } from "../lib/client";
+
 // image error showing up here. figure out why its  doing that and finish this page to start working on implementing it also to the checkout.
 // try to start working on the collection page and see if we can find a way to filter by collection.
 // you got this;)
 
 const DiscProduct = ({
-  discproduct: { image, name, slug, price, smallDetails },
+  discproduct: { image, name, slug, price, smallDetails }, // image is not being read
 }) => {
   return (
     <div className="bg-black rounded-lg w-[200px] md:w-[350px] ml-[10px]  md:ml-[50px] mt-[20px]">

@@ -19,7 +19,9 @@ const AccordionItem = ({ open, toggle, title, desc }) => {
 
       <Collapse isOpened={open}>
         <div className="bg-pink-400 rounded-lg text-left text-black font-semibold px-[10px] pb-[10px] mt-[5px]">
-          <p className="text-[15px] ml-[20px] w-[80%]">{desc}</p>
+          <p className="text-[15px] ml-[20px] pt-[10px] md:pt-[10px] w-[80%]">
+            {desc}
+          </p>
         </div>
       </Collapse>
     </div>

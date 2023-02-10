@@ -3,10 +3,8 @@ import { urlFor } from "../lib/client";
 import { AiFillStar } from "react-icons/ai";
 import Link from "next/link";
 
-// get the bigger text to have a color like the items bg with bg-gradient or text-gradient.
-//fix text alignment.
-
-// work on fixing the skinny banner to look similar to the banner before this one.
+// change this to
+//desk: box side to side with image for the first half top and text and button for the second half.
 
 const Banner2 = ({ banner2 }) => {
   return (
@@ -24,7 +22,7 @@ const Banner2 = ({ banner2 }) => {
           <AiFillStar />
           <AiFillStar />
         </div>
-        <h2 className="w-[90%] md:w-[60%] text-[12px] md:text-[17px] text-white text-center font-semibold ml-[30px] md:ml-[110px] mt-[10px] md:mt-[10px]">
+        <h2 className="w-[90%] md:w-[60%] text-[12px] md:text-[17px] text-white text-center font-semibold ml-[20px] md:ml-[110px] mt-[10px] md:mt-[10px]">
           "This is a great customer review. This is a great customer review.
           This is a great customer review."
         </h2>
@@ -52,10 +50,10 @@ const Banner2 = ({ banner2 }) => {
         </div>
 
         <div className="w-[80%] bg-purple-300 mt-[20px] ml-[30px] md:ml-[150px] rounded-lg">
-          <h1 className=" text-center text-pink-700 mt-[15px] md:mt-[40px] text-[20px] w-[105%] md:w-full md:text-[35px]">
+          <h1 className=" text-center text-purple-700 mt-[15px] md:mt-[40px] text-[20px] w-[105%] md:w-full md:text-[35px]">
             Shop Unique
           </h1>
-          <h1 className="text-center ml-[20px] md:ml-[0px] text-pink-700 w-[90%] md:w-full md:mr-[30px] font-bold text-[20px] md:text-[35px] mt-[15px] md:mt-[40px]">
+          <h1 className="text-center ml-[20px] md:ml-[0px] text-purple-700 w-[90%] md:w-full md:mr-[30px] font-bold text-[20px] md:text-[35px] mt-[15px] md:mt-[40px]">
             {banner2.midText}
           </h1>
           <Link href="./collection">

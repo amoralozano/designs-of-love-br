@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { client, urlFor } from "../../lib/client";
 import { Product } from "../../components/";
 import { useStateContext } from "../../context/StateContext";
+
+// start adding fuctionality to buy now button... look back at example eccomerce website.
 import {
   AiOutlineMinus,
   AiOutlinePlus,
@@ -28,9 +30,15 @@ const ProductDetails = ({ product, products }) => {
     setOpen(index);
   };
 
+  const handleBuyNow = () => {
+    onAdd(product, qty);
+
+    setShowCart(true);
+  };
+
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
-  const { decQty, incQty, qty, onAdd } = useStateContext();
+  const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
   const accordionData = [
     {
       title: "Details",
@@ -52,9 +60,9 @@ const ProductDetails = ({ product, products }) => {
         <h1 className="visible md:invisible text-center w-full text-[50px] md:text-[60px] mt-[-30px] rowdies font-bold text-white ">
           {name}
         </h1>
-        <div className="bg-black md:bg-transparent ml-[60px] md:ml-[-30px] mt-[30px] md:mt-[50px] h-[300px] w-[300px] md:w-[500px] md:h-[400px] ">
+        <div className="bg-black md:bg-black ml-[60px] md:ml-[-30px] mt-[30px] md:mt-[50px] h-[300px] w-[300px] md:w-[500px] md:h-[400px] ">
           <img
-            className="bg-white rounded-lg md:ml-[25px] mt-[15px] w-[300px] h-[300px] md:w-[500px] md:h-[400px]  duration-3000"
+            className="bg-white rounded-lg md:ml-[15px] mt-[15px] w-[300px] h-[300px] md:w-[500px] md:h-[400px]  duration-3000"
             src={urlFor(image && image[index])}
           />
           <div className=" md:ml-[25px] mt-[150px] md:mt-[30px] w-full h-[160px] md:bg-black">
@@ -77,14 +85,14 @@ const ProductDetails = ({ product, products }) => {
             </div>
           </div>
         </div>
-        <div className=" grid grid-cols-3 md:grid-cols-1 md:flex-row-1 md:align-middle bg-transparent md:bg-transparent w-[80%] md:w-[130px] h-[100px] md:h-[350px] md:gap-[10px] mt-[20px] md:mt-[70px] ml-[40px] md:ml-[50px] ">
+        <div className=" grid grid-cols-3 md:grid-cols-1 md:flex-row-1 md:align-middle bg-transparent md:bg-transparent w-[80%] md:w-[30%] h-[100px] md:h-[350px] md:gap-[10px] mt-[20px] md:mt-[70px] ml-[40px] md:ml-[50px] ">
           {image?.map((item, i) => (
             <img
               key={i}
               src={urlFor(item)}
               className={
                 i === index
-                  ? "w-[120px] h-[100px] md:h-[120px] cursor-pointer bg-pink-400 rounded-lg"
+                  ? "w-[120px] h-[100px] md:w-[120px] md:h-[120px] cursor-pointer bg-pink-400 rounded-lg"
                   : "rounded-lg w-[100px] h-[100px] cursor-pointer"
               }
               onMouseEnter={() => setIndex(i)}
@@ -147,13 +155,13 @@ const ProductDetails = ({ product, products }) => {
             <button
               className="rowdies w-[300px] md:w-[400px] h-[50px] bg-black text-purple-300 px-[30px] ml-[20px] md:ml-[20px] rounded-lg py-[5px] text-[22px] border-2 border-purple-400 mt-[0px]"
               type="button"
-              onClick=""
+              onClick={handleBuyNow}
             >
               Buy Now
             </button>
           </div>
 
-          <div className="grid place-items-center bg-transparent mt-[30px] md:mt-[30px] text-black">
+          <div className="grid place-items-center bg-transparent mt-[30px] md:mt-[30px] ml-0 md:ml-[20px] text-black">
             {accordionData.map((data, index) => {
               return (
                 <AccordionItem

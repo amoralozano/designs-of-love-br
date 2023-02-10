@@ -16,7 +16,7 @@
     "daisyui": "^2.47.0",
     "flowbite": "^1.6.3",
     "flowbite-react": "^0.3.8",
-    "next": "13.1.1",
+    "next": "^13.1.7-canary.7",
     "react": "18.2.0",
     "react-collapse": "^5.1.1",
     "react-dom": "18.2.0",
