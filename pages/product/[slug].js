@@ -184,7 +184,7 @@ const ProductDetails = ({ product, products }) => {
           and you might as well
         </p>
 
-        <div className="bg-transparent md:mt-[50px] w-[80%] md:ml-[90px] lg:ml-[450px] px-2 rounded-lg">
+        <div className="bg-transparent md:mt-[50px] w-[80%] md:ml-[90px] lg:ml-[250px] px-2 rounded-lg">
           <div className="h-[500px] relative mr-[40px]">
             <div className="grid grid-cols-1 ml-[100px] md:ml-[-120px] md:flex hover md:justify-center md:absolute mt-[5px]">
               {products.map(
