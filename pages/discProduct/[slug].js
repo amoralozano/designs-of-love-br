@@ -17,10 +17,7 @@ import {
 import AccordionItem from "../../components/AccordionItem";
 
 /// to do for the last push:
-// fix the cart to showup in fron tof the first banner
-// make images show up on checkout
-// work on screen sizing for ipad and big screens.
-// fix shipping section and the other section.
+// fix the cart to showup in fron tof the first banner // only one left to do. push to github
 // push to github and look at deploying for testing purposes.
 
 // DUE BY END OF DAY SATURDAY!
@@ -62,7 +59,7 @@ const DiscProductDetails = ({ discproduct, discproducts }) => {
   return (
     <div className="w-full bg-black mb-[200px] md:mb-[100px]">
       <br />
-      <div className=" md:flex w-full h-[1200px] md:h-[800px] md:ml-[-150px] bg-transparent md:bg-transparent">
+      <div className=" md:flex w-full h-[1200px] md:h-[800px] md:ml-[-150px] lg:ml-[-350px] bg-transparent md:bg-transparent">
         <h1 className="visible md:invisible text-center w-full text-[50px] md:text-[60px] mt-[-30px] rowdies font-bold text-white ">
           {name}
         </h1>
@@ -190,7 +187,7 @@ const DiscProductDetails = ({ discproduct, discproducts }) => {
           and you might as well
         </p>
 
-        <div className="bg-transparent md:mt-[50px] w-[80%] md:ml-[90px] px-2 rounded-lg">
+        <div className="bg-transparent md:mt-[50px] w-[80%] md:ml-[90px] lg:ml-[300px] px-2 rounded-lg">
           <div className="h-[500px] relative mr-[40px]">
             <div className="grid grid-cols-1 ml-[100px] md:ml-0 md:flex hover md:justify-center md:absolute mt-[5px]">
               {discproducts.map(

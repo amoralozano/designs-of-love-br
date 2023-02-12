@@ -36,7 +36,7 @@ const ProductDetails = ({ product, products }) => {
     setShowCart(true);
   };
 
-  const { image, name, details, price } = product;
+  const { image, name, details, price, materials, shipping } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
   const accordionData = [
@@ -45,18 +45,18 @@ const ProductDetails = ({ product, products }) => {
       desc: [details], // passing details for each page to get a unique set and not the same!
     },
     {
-      title: "Shipping",
-      desc: "text to the center of the universe. metaaverse applepark elonmusk going to the moon and back. text to the center of the universe. metaaverse applepark elonmusk going to the moon and back.",
+      title: "Materials",
+      desc: [materials],
     },
     {
-      title: "Return Policy",
-      desc: "text to the center of the universe. metaaverse applepark elonmusk going to the moon and back. text to the center of the universe. metaaverse applepark elonmusk going to the moon and back.",
+      title: "Shipping",
+      desc: [shipping],
     },
   ];
   return (
-    <div className="w-full bg-black mb-[200px] md:mb-[100px]">
+    <div className="w-full mb-[200px] md:mb-[100px]">
       <br />
-      <div className=" md:flex w-full h-[1200px] md:h-[800px] md:ml-[-150px] bg-transparent md:bg-transparent">
+      <div className=" md:flex w-full h-[1200px] md:h-[800px] md:ml-[-100px] lg:ml-[-350px] bg-black">
         <h1 className="visible md:invisible text-center w-full text-[50px] md:text-[60px] mt-[-30px] rowdies font-bold text-white ">
           {name}
         </h1>
@@ -85,7 +85,7 @@ const ProductDetails = ({ product, products }) => {
             </div>
           </div>
         </div>
-        <div className=" grid grid-cols-3 md:grid-cols-1 md:flex-row-1 md:align-middle bg-transparent md:bg-transparent w-[80%] md:w-[30%] h-[100px] md:h-[350px] md:gap-[10px] mt-[20px] md:mt-[70px] ml-[40px] md:ml-[50px] ">
+        <div className=" grid grid-cols-3 md:grid-cols-1 md:flex-row-1 md:align-middle bg-transparent md:bg-black w-[80%]  md:w-[30%] h-[100px] md:h-[350px] md:gap-[10px] mt-[20px] md:mt-[70px] ml-[40px] md:ml-[50px] ">
           {image?.map((item, i) => (
             <img
               key={i}
@@ -176,17 +176,17 @@ const ProductDetails = ({ product, products }) => {
           </div>
         </div>
       </div>
-      <div className="w-full  h-[1200px] md:h-[700px] text-center mt-[220px] md:mt-[200px]">
+      <div className="w-full  h-[1200px] md:h-[700px] text-center md:text-left lg:text-center mt-[220px] md:mt-[200px]">
         <h1 className="lobster text-[55px] md:text-[70px] md:mr-[50px] font-bold text-pink-500">
           What Others Love
         </h1>
-        <p className=" rowdies font-bold md:mr-[50px] text-white text-[20px]">
+        <p className=" rowdies font-bold md:ml-[20px] text-white text-[20px]">
           and you might as well
         </p>
 
-        <div className="bg-transparent md:mt-[50px] w-[80%] md:ml-[90px] px-2 rounded-lg">
+        <div className="bg-transparent md:mt-[50px] w-[80%] md:ml-[90px] lg:ml-[450px] px-2 rounded-lg">
           <div className="h-[500px] relative mr-[40px]">
-            <div className="grid grid-cols-1 ml-[100px] md:ml-0 md:flex hover md:justify-center md:absolute mt-[5px]">
+            <div className="grid grid-cols-1 ml-[100px] md:ml-[-120px] md:flex hover md:justify-center md:absolute mt-[5px]">
               {products.map(
                 (item, index) =>
                   index < 3 && <Product key={item._id} product={item} /> // I made it to where only 3 show instead of the scrolling.

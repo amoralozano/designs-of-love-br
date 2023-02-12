@@ -7,7 +7,7 @@ const collection = ({ products, products2 }) => {
     <div className="w-full bg-black mb-[200px]">
       <br />
       <div className="flex justify-center items-center w-full h-[200px] bg-black">
-        <h1 className="text-center text-[55px] md:text-[110px] font-bold lobster text-white">
+        <h1 className="text-center text-[55px] sm:text-[35px] md:text-[90px] font-bold lobster text-white">
           My Collections
         </h1>
         <p className="rowdies ml-[30px] mt-[10px] text-pink-300 text-[18px] md:text-[25px] font-bold">
@@ -38,7 +38,7 @@ const collection = ({ products, products2 }) => {
       <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
         <div className="w-full bg-black">
           <br />
-          <h1 className="rowdies text-left md:text-right text-[30px] ml-[20px] md:ml-0 md:text-[45px] md:mr-[110px] text-white font-bold mb-[20px]">
+          <h1 className="rowdies text-left md:text-right text-[30px] ml-[20px] md:ml-0 lg:mr-[190px] md:text-[45px] md:mr-[110px] text-white font-bold mb-[20px]">
             Summer Collection
           </h1>
 

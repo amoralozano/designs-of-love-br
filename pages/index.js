@@ -15,11 +15,13 @@ const Home = ({ products, discProducts, bannerData1, bannerData2 }) => {
     <div className=" bg-black mb-[100px]">
       <br />
       <div className=" flex justify-center items-center md:mt-[30px] w-full h-[200px]bg-transparent">
-        <h1 className="text-center lobster text-[60px] mt-0 md:mt-[-60px] md:text-[110px] font-bold text-pink-300">
+        <h1 className="text-center lobster text-[60px] mt-0 md:mt-[-60px] md:text-[110px] lg:text-[120px] font-bold text-pink-300">
           Welcome To My Craft
         </h1>
       </div>
-      <HeroBanner heroBanner={bannerData1.length && bannerData1[0]} />
+      <div className="">
+        <HeroBanner heroBanner={bannerData1.length && bannerData1[0]} />
+      </div>
       {console.log(bannerData1)}
       <div className="bg-transparent text-left ml-[20px] md:ml-[200px] mt-[-50px] md:mt-[100px]">
         <h2 className=" text-[50px] md:text-[80px] lobster font-bold text-pink-600">
@@ -50,7 +52,7 @@ const Home = ({ products, discProducts, bannerData1, bannerData2 }) => {
         </Link>
       </div> */}
 
-      <div className="bg-transparent text-left ml-[20px] md:ml-[200px] mt-[-50px] md:mt-[100px]">
+      <div className="bg-transparent text-left ml-[20px] md:ml-[200px] lg:ml-[400px] mt-[-50px] md:mt-[100px]">
         <h2 className=" text-[55px] md:text-[65px] font-bold lobster text-purple-600">
           On Sale
         </h2>

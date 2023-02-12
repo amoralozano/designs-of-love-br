@@ -8,7 +8,9 @@ import { urlFor } from "../lib/client";
 // find out how to have 2 per row and if its only one at the end have it centered orrrr make a carusel kind senction for mobile.
 // finish home screen layout fix, start working on product details mobile.
 
-const Product = ({ product: { image, name, slug, price, smallDetails } }) => {
+const Product = ({
+  product: { image, name, slug, price, smallDetails, materials, shipping },
+}) => {
   return (
     <div className="bg-black rounded-lg w-[200px] md:w-[350px] ml-[10px]  md:ml-[50px] mt-[20px]">
       <Link href={`/product/${slug.current}`}>
