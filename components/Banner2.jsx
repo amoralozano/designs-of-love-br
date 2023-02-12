@@ -15,7 +15,7 @@ const Banner2 = ({ banner2 }) => {
           className="bg-gray-500 h-[200px] w-[220px] md:w-[525px] md:h-[450px] lg:w-[625px] lg:h-[550px] ml-[10px] md:ml-[30px] mt-[30px] md:mt-[80px] flex rounded-lg"
         />
 
-        <div className="mt-[15px] ml-[60px] md:ml-[220px] lg:ml-[280px] md:text-[30px] text-purple-500 flex content-center">
+        <div className="mt-[15px] ml-[60px] md:ml-[200px]  md:text-[30px] text-purple-500 flex content-center">
           <AiFillStar />
           <AiFillStar />
           <AiFillStar />
@@ -40,7 +40,7 @@ const Banner2 = ({ banner2 }) => {
           </h1>
           <Link href="/collection">
             <button
-              className=" bg-black text-pink-300 font-bold px-[10px] md:px-[20px] rounded-lg py-[6px] md:py-[10px] text-[15px] md:text-[25px] mt-[5px] md:mt-[25px] ml-[50px] md:ml-[250px] lg:ml-[390px] mb-[5px] md:mb-[10px] border-[1px] border-pink-300"
+              className=" bg-black text-pink-300 font-bold px-[10px] md:px-[20px] rounded-lg py-[6px] md:py-[10px] text-[15px] md:text-[25px] mt-[5px] md:mt-[25px] ml-[50px] md:ml-[250px] mb-[5px] md:mb-[10px] border-[1px] border-pink-300"
               type="button"
               href="/collection"
             >
@@ -58,7 +58,7 @@ const Banner2 = ({ banner2 }) => {
           </h1>
           <Link href="./collection">
             <button
-              className=" bg-black text-purple-300 border-[1px] border-purple-300 font-bold px-[10px] md:px-[20px] rounded-lg py-[5px] md:py-[10px] text-[15px] md:text-[25px] mt-[10px] md:mt-[25px] ml-[20px] mb-[5px] md:ml-[220px] lg:ml-[300px] md:mb-[10px]"
+              className=" bg-black text-purple-300 border-[1px] border-purple-300 font-bold px-[10px] md:px-[20px] rounded-lg py-[5px] md:py-[10px] text-[15px] md:text-[25px] mt-[10px] md:mt-[25px] ml-[20px] mb-[5px] md:ml-[200px] md:mb-[10px]"
               type="button"
             >
               Explore Collections

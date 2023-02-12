@@ -52,7 +52,7 @@ const Cart = () => {
   return (
     // figure out a good color pattern to best match the website and design.
     <div className=" absolute md:fixed">
-      <div className="h-[100vh] md:h-[100vh] md:w-[600px] bg-gradient-to-l from-gray-900 to-black float-right px-[40px] py-[10px] mr-[-25px] md:ml-[-20px] lg:ml-[180px] mt-[-25px] md:mt-[-72px] relative border-2 border-gray-900 shadow-md shadow-gray-900">
+      <div className="h-[100vh] md:h-[100vh] md:w-[600px] bg-gradient-to-l from-gray-900 to-black float-right px-[40px] py-[10px] mr-[-25px] md:ml-[-20px]  mt-[-25px] md:mt-[-72px] relative border-2 border-gray-900 shadow-md shadow-gray-900">
         <button
           type="button"
           className="flex align-middle text-[18px] text-white font-bold cursor-pointer gap-[2px] ml-[-15px] bg-transparent"

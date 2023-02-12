@@ -56,7 +56,7 @@ const ProductDetails = ({ product, products }) => {
   return (
     <div className="w-full mb-[200px] md:mb-[100px]">
       <br />
-      <div className=" md:flex w-full h-[1200px] md:h-[800px] md:ml-[-100px] lg:ml-[-350px] bg-black">
+      <div className=" md:flex w-full h-[1200px] md:h-[800px]  md:ml-[-100px] bg-black">
         <h1 className="visible md:invisible text-center w-full text-[50px] md:text-[60px] mt-[-30px] rowdies font-bold text-white ">
           {name}
         </h1>

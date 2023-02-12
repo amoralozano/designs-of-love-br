@@ -33,7 +33,7 @@ const about = () => {
               src={mystoryimage}
             />
           </div>
-          <div className="relative overflow-auto md:overflow-auto rounded-xl h-[250px] md:h-[320px] md:mt-[-20px] lg:w-[80%] lg:ml-[130px]  bg-black border-2 shadow-lg shadow-pink-500 ">
+          <div className="relative overflow-auto md:overflow-auto rounded-xl h-[250px] md:h-[320px] md:mt-[-20px] lg:w-[80%] lg:ml-[150px]  bg-black border-2 shadow-lg shadow-pink-500 ">
             <h1 className=" text-[25px] md:text-[55px] text-center mt-[10px] lobster text-white">
               Founders Story
             </h1>
@@ -59,7 +59,7 @@ const about = () => {
           </div>
         </div>
         <br />
-        <div className="w-[85%] h-[250px] bg-transparent mt-[50px] lg:ml-[100px] rounded-xl">
+        <div className="w-[85%] h-[250px] bg-transparent mt-[50px] lg:ml-[0px] rounded-xl">
           <h1 className=" text-center md:text-left text-[40px] md:text-[55px] ml-[40px] md:ml-[30px] text-white lobster">
             {" "}
             Our Commitment
