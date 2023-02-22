@@ -19,7 +19,7 @@ const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <nav className="w-full bg-gradient-to-r from-pink-300 to-pink-500 border-gray-200 px-2 sm:px-4 py-[1px] mt-[-30px] rounded dark:bg-white">
+    <nav className="w-full bg-gradient-to-r from-pink-400 to-pink-600 border-gray-200 px-2 sm:px-4 py-[1px] mt-[-30px] rounded dark:bg-white">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -30,7 +30,7 @@ const NavBar = () => {
                   className=" w-[60px] h-[60px] mr-[10px] md:mr-0 md:h-[75px] md:w-[75px]"
                   alt="Flowbite Logo"
                 />
-                <span class=" lobster self-center text-xl md:text-[28px] font-semibold whitespace-nowrap dark:text-black">
+                <span class=" lobster self-center text-xl md:text-[28px] lg:ml-[10px] font-semibold whitespace-nowrap dark:text-black">
                   Designs of Love by Ruth
                 </span>
               </a>
@@ -99,7 +99,7 @@ const NavBar = () => {
               onClick={() => setShowCart(true)}
             >
               <AiOutlineShopping />
-              <span className="absolute right-[-8px] text-[12px] text-center font-bold text-white bg-pink-600 shadow-md shadow-pink-500 w-[18px] h-[18px] rounded-[50%] mt-[-8px]">
+              <span className="absolute right-[-8px] text-[12px] text-center font-bold text-white bg-black shadow-md shadow-pink-500 w-[18px] h-[18px] rounded-[50%] mt-[-8px]">
                 {totalQuantities}
               </span>
             </button>

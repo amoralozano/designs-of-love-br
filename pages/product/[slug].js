@@ -16,6 +16,7 @@ import {
   FaCcPaypal,
   FaCcMastercard,
 } from "react-icons/fa";
+
 import AccordionItem from "../../components/AccordionItem";
 
 // figure out a way to get different products in this page for the recommended section for better feel of the site!
@@ -176,7 +177,7 @@ const ProductDetails = ({ product, products }) => {
           </div>
         </div>
       </div>
-      <div className="w-full  h-[1200px] md:h-[700px] text-center md:text-left lg:text-center mt-[220px] md:mt-[200px]">
+      <div className="w-full bg-gray-900 h-[1200px] md:h-[700px] text-center md:text-left lg:text-center mt-[220px] md:mt-[200px]">
         <h1 className="lobster text-[55px] md:text-[70px] md:mr-[50px] font-bold text-pink-500">
           What Others Love
         </h1>

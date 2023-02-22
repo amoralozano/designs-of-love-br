@@ -27,9 +27,9 @@ const about = () => {
       <br />
       <div className="mt-[50px] w-full md:w-full md:ml-[100px] lg:ml-[]">
         <div className=" rounded-xl ml-[0px] md:ml-[-30px] w-full  md:w-[90%]  bg-black">
-          <div className="md:w-[80%] md:ml-[130px] h-full bg-black rounded-xl ">
+          <div className="md:w-[80%] md:ml-[130px] h-[600px] bg-black rounded-xl ">
             <Image
-              className="w-full md:w-full lg:w-[80%] lg:ml-[150px] md:h-[550px] bg-green-200 rounded-tr-xl rounded-br-xl"
+              className="w-full md:w-full lg:w-[80%] lg:ml-[150px] md:h-[550px] bg-green-200 rounded-lg"
               src={mystoryimage}
             />
           </div>

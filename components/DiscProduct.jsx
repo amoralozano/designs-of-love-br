@@ -10,7 +10,7 @@ const DiscProduct = ({
   discproduct: { image, name, slug, price, smallDetails }, // image is not being read
 }) => {
   return (
-    <div className="bg-black rounded-lg w-[200px] md:w-[350px] ml-[10px]  md:ml-[50px] mt-[20px]">
+    <div className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:bg-purple-500  bg-black rounded-lg w-[200px] md:w-[350px] ml-[10px]  md:ml-[50px] mt-[20px]">
       <Link href={`/discProduct/${slug.current}`}>
         <div>
           <img
@@ -20,13 +20,13 @@ const DiscProduct = ({
           <p className=" rowdies text-left text-[22px] md:text-[25px] font-bold mt-[10px] ml-[10px] text-white">
             {name}
           </p>
-          <p className="text-[15px] md:text-[18px] text-left ml-[10px] mt-[5px] font-bold text-pink-200">
+          <p className="text-[15px] md:text-[18px] text-left ml-[10px] mt-[5px] font-bold text-pink-400">
             {smallDetails}
           </p>
-          <p className="rowdies text-[18px] md:text-[20px] text-gray-300 text-left ml-[10px] font-semibold mt-[10px]">
+          <p className="rowdies text-[18px] md:text-[20px] text-white text-left ml-[10px] font-semibold mt-[10px]">
             ${price}
           </p>
-          <button className="bg-black border-2 border-purple-400  text-purple-400 ml-[10px] h-[40px] w-[150px] md:w-[200px] flex items-center justify-center rounded-lg text-[20px] mt-[10px]">
+          <button className="bg-black border-2 border-purple-400  text-white ml-[10px] h-[40px] w-[150px] md:w-[200px] flex items-center justify-center rounded-lg text-[20px] mt-[10px] mb-[10px]">
             Add To Cart
           </button>
         </div>

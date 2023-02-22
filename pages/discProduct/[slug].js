@@ -59,7 +59,7 @@ const DiscProductDetails = ({ discproduct, discproducts }) => {
   return (
     <div className="w-full bg-black mb-[200px] md:mb-[100px]">
       <br />
-      <div className=" md:flex w-full h-[1200px] md:h-[800px] md:ml-[-150px] lg:ml-[-350px] bg-transparent md:bg-transparent">
+      <div className=" md:flex w-full h-[1200px] md:h-[800px] md:ml-[-100px] bg-transparent">
         <h1 className="visible md:invisible text-center w-full text-[50px] md:text-[60px] mt-[-30px] rowdies font-bold text-white ">
           {name}
         </h1>
@@ -179,7 +179,7 @@ const DiscProductDetails = ({ discproduct, discproducts }) => {
           </div>
         </div>
       </div>
-      <div className="w-full  h-[1200px] md:h-[700px] text-center mt-[220px] md:mt-[200px]">
+      <div className="w-full bg-gray-900  h-[1200px] md:h-[700px] text-center md:text-left lg:text-center mt-[220px] md:mt-[200px]">
         <h1 className="lobster text-[55px] md:text-[70px] md:mr-[50px] font-bold text-pink-500">
           What Others Love
         </h1>
@@ -187,9 +187,9 @@ const DiscProductDetails = ({ discproduct, discproducts }) => {
           and you might as well
         </p>
 
-        <div className="bg-transparent md:mt-[50px] w-[80%] md:ml-[90px] lg:ml-[300px] px-2 rounded-lg">
+        <div className="bg-transparent md:mt-[50px] w-[80%] md:ml-[90px] lg:ml-[250px] px-2 rounded-lg">
           <div className="h-[500px] relative mr-[40px]">
-            <div className="grid grid-cols-1 ml-[100px] md:ml-0 md:flex hover md:justify-center md:absolute mt-[5px]">
+            <div className="grid grid-cols-1 ml-[100px] md:ml-[-120] lg:ml-[-130px] md:flex hover md:justify-center md:absolute mt-[5px]">
               {discproducts.map(
                 (item, index) =>
                   index < 3 && <DiscProduct key={item._id} discproduct={item} /> //try changing product to discproduct

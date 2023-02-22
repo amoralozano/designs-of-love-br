@@ -7,7 +7,7 @@ import { BsFacebook } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer class="p-4 bg-transparent sm:p-6 ">
+    <footer class="p-4 bg-transparent sm:p-6 mt-[300px] ">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
           <a href="https://flowbite.com/" class="flex items-center">
