@@ -74,17 +74,17 @@ const Footer = () => {
           </div>
           <div>
             <h2 class="mb-6 text-[17px] font-bold text-pink-400 uppercase dark:text-white">
-              Legal
+              Contact Us
             </h2>
             <ul class="text-white dark:text-gray-400">
               <li class="mb-4">
                 <a href="#" class="hover:underline">
-                  Privacy Policy
+                  Email
                 </a>
               </li>
               <li>
                 <a href="#" class="hover:underline">
-                  Terms &amp; Conditions
+                  WhatsApp
                 </a>
               </li>
             </ul>
