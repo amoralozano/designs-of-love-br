@@ -37,7 +37,7 @@ const NavBar = () => {
             </div>
             <div className="md:hidden">
               <button
-                className="p-2  mt-[-10px] mr-[40px] md:mr-[0px] md:mt-[0px] text-pink-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                className="p-2  mt-[-10px] mr-[40px] md:mr-[0px] md:mt-[0px] text-pink-300 rounded-md outline-none focus:border-gray-400 focus:border"
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (
