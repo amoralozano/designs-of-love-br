@@ -1,25 +1,47 @@
 import React from "react";
 import { Product } from "../components";
 import { client } from "../lib/client";
+import {
+  ColTitle,
+  ColTitle2,
+  ColTitle3,
+  ColTitle4,
+  ColTitle5,
+  ColTitle6,
+  ColTitle7,
+  ColMainBanner,
+} from "../components";
 
-const collection = ({ products, products2 }) => {
+// figure out from why this is happening and if its unfixable find a better way to make it work,
+
+// figure out how to make each title be changed with sanity
+
+const collection = ({
+  products,
+  products2,
+  products3,
+  products4,
+  products5,
+  products6,
+  colTitles,
+  colTitles2,
+  colTitles3,
+  colTitles4,
+  colTitles5,
+  colTitles6,
+  colTitles7,
+  colMainBanners,
+}) => {
   return (
     <div className="w-full bg-black mb-[200px]">
       <br />
-      <div className="flex justify-center items-center w-full h-[200px] bg-black">
-        <h1 className="text-center text-[55px] sm:text-[35px] md:text-[90px] font-bold lobster text-white">
-          My Collections
-        </h1>
-        <p className="rowdies ml-[30px] mt-[10px] text-pink-300 text-[18px] md:text-[25px] font-bold">
-          Something for everyones style
-        </p>
-      </div>
+      <ColMainBanner
+        colmainbanner={colMainBanners.length && colMainBanners[0]}
+      />
       <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
         <div className="w-full bg-black">
           <br />
-          <h1 className="rowdies text-left md:text-left text-[30px] ml-[20px] md:ml-[40px] md:text-[45px] text-white font-bold mb-[20px]">
-            Original Collection
-          </h1>
+          <ColTitle coltitle={colTitles.length && colTitles[0]} />
 
           <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-1">
             {products?.map((product) => (
@@ -38,12 +60,10 @@ const collection = ({ products, products2 }) => {
       <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
         <div className="w-full bg-black">
           <br />
-          <h1 className="rowdies text-left md:text-right text-[30px] ml-[20px] md:ml-0 lg:mr-[190px] md:text-[45px] md:mr-[110px] text-white font-bold mb-[20px]">
-            Summer Collection
-          </h1>
+          <ColTitle2 coltitle2={colTitles2.length && colTitles2[0]} />
 
           <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-1">
-            {products?.map((product) => (
+            {products2?.map((product) => (
               <Product key={product._id} product={product} />
             ))}
           </div>
@@ -53,12 +73,48 @@ const collection = ({ products, products2 }) => {
       <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
         <div className="w-full bg-black">
           <br />
-          <h1 className="rowdies text-left md:text-left text-[30px] ml-[20px] md:ml-[40px] md:text-[45px] text-white font-bold mb-[20px]">
-            Old Skool Collection
-          </h1>
+          <ColTitle3 coltitle3={colTitles3.length && colTitles3[0]} />
 
           <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-1">
-            {products?.map((product) => (
+            {products3?.map((product) => (
+              <Product key={product._id} product={product} />
+            ))}
+          </div>
+          <br />
+        </div>
+      </div>
+      <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
+        <div className="w-full bg-black">
+          <br />
+          <ColTitle4 coltitle4={colTitles4.length && colTitles4[0]} />
+
+          <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-1">
+            {products4?.map((product) => (
+              <Product key={product._id} product={product} />
+            ))}
+          </div>
+          <br />
+        </div>
+      </div>
+      <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
+        <div className="w-full bg-black">
+          <br />
+          <ColTitle5 coltitle5={colTitles5.length && colTitles5[0]} />
+
+          <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-1">
+            {products5?.map((product) => (
+              <Product key={product._id} product={product} />
+            ))}
+          </div>
+          <br />
+        </div>
+      </div>
+      <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
+        <div className="w-full bg-black">
+          <br />
+          <ColTitle6 coltitle6={colTitles6.length && colTitles6[0]} />
+          <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-1">
+            {products6?.map((product) => (
               <Product key={product._id} product={product} />
             ))}
           </div>
@@ -79,10 +135,58 @@ export const getServerSideProps = async () => {
   const query2 = '*[collection == "original2"]';
   const products2 = await client.fetch(query2);
 
+  const query3 = '*[collection == "original3"]';
+  const products3 = await client.fetch(query3);
+
+  const query4 = '*[collection == "original4"]';
+  const products4 = await client.fetch(query4);
+
+  const query5 = '*[collection == "original5"]';
+  const products5 = await client.fetch(query5);
+
+  const query6 = '*[collection == "original6"]';
+  const products6 = await client.fetch(query6);
+
+  const titleQuery = '*[_type == "coltitle"]'; // grab all products from
+  const colTitles = await client.fetch(titleQuery);
+
+  const title2Query = '*[_type == "coltitle2"]';
+  const colTitles2 = await client.fetch(title2Query);
+
+  const title3Query = '*[_type == "coltitle3"]';
+  const colTitles3 = await client.fetch(title3Query);
+
+  const title4Query = '*[_type == "coltitle4"]';
+  const colTitles4 = await client.fetch(title4Query);
+
+  const title5Query = '*[_type == "coltitle5"]';
+  const colTitles5 = await client.fetch(title5Query);
+
+  const title6Query = '*[_type == "coltitle6"]';
+  const colTitles6 = await client.fetch(title6Query);
+
+  const title7Query = '*[_type == "coltitle7"]';
+  const colTitles7 = await client.fetch(title7Query);
+
+  const titleTopQuery = '*[_type == "colmainbanner"]';
+  const colMainBanners = await client.fetch(titleTopQuery);
+
   return {
     props: {
       products,
       products2,
+      products3,
+      products4,
+      products5,
+      products6,
+      colTitles,
+      colTitles2,
+      colTitles3,
+      colTitles4,
+      colTitles5,
+      colTitles6,
+      colTitles7,
+      colMainBanners,
     },
   };
 };

@@ -38,7 +38,7 @@ const DiscProductDetails = ({ discproduct, discproducts }) => {
     setShowCart(true);
   };
 
-  const { image, name, details, price } = discproduct;
+  const { image, name, details, price, materials, shipping } = discproduct;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
   const accordionData = [
@@ -47,12 +47,12 @@ const DiscProductDetails = ({ discproduct, discproducts }) => {
       desc: [details], // passing details for each page to get a unique set and not the same!
     },
     {
-      title: "Shipping",
-      desc: "text to the center of the universe. metaaverse applepark elonmusk going to the moon and back. text to the center of the universe. metaaverse applepark elonmusk going to the moon and back.",
+      title: "Materials",
+      desc: [materials],
     },
     {
-      title: "Return Policy",
-      desc: "text to the center of the universe. metaaverse applepark elonmusk going to the moon and back. text to the center of the universe. metaaverse applepark elonmusk going to the moon and back.",
+      title: "Shipping",
+      desc: [shipping],
     },
   ];
 

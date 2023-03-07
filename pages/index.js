@@ -1,36 +1,35 @@
 import React from "react";
 import Link from "next/link";
 import { client } from "../lib/client";
-import { Product, DiscProduct, HeroBanner, Banner2 } from "../components"; // if app crashes look into making .babelrc file.
+import {
+  Product,
+  DiscProduct,
+  HeroBanner,
+  Banner2,
+  MainProd,
+  DiscProd,
+  MainTitle,
+  NavBar,
+} from "../components";
 
-// to add any pages add to this directore of pages and when you do the link do <Link href="/about" >Button or whatever</Link>
-
-// try to move the tittles to the left and right side and see if they look better that way!
-// continue styling the products page for the desktop view and see if any changes need to be made for mobile.
-// continue finishing off by finishing styling both mobile and desktop for the about page and collections page.
-// try changing banner2 to something that fits the site better both mobile and desktop.
-
-const Home = ({ products, discProducts, bannerData1, bannerData2 }) => {
+const Home = ({
+  products,
+  discProducts,
+  bannerData1,
+  bannerData2,
+  mainProd,
+  discProd,
+  mainTitle,
+}) => {
   return (
     <div className=" bg-black mb-[100px]">
       <br />
-      <div className=" flex justify-center items-center md:mt-[30px] w-full h-[200px] bg-transparent">
-        <h1 className="text-left lobster text-[60px] mt-0 md:mt-[-60px] md:text-[110px] lg:text-[100px] lg:mr-[0px] font-bold text-pink-400">
-          Welcome To My Craft
-        </h1>
-      </div>
+      <MainTitle maintitle={mainTitle.length && mainTitle[0]} />
       <div className="">
         <HeroBanner heroBanner={bannerData1.length && bannerData1[0]} />
       </div>
       {console.log(bannerData1)}
-      <div className="bg-transparent text-left ml-[20px] md:ml-[200px] mt-[-50px] md:mt-[100px]">
-        <h2 className=" text-[50px] md:text-[80px] lobster font-bold text-pink-600">
-          Top Picks
-        </h2>
-        <p className="text-white font-bold mt-[-5px] rowdies text-[20px] md:text-[25px]">
-          Prices may vary
-        </p>
-      </div>
+      <MainProd mainprod={mainProd.length && mainProd[0]} />
       <div className="grid grid-cols-2 md:flex flex-wrap justify-center w-full mt-[20px] bg-transparent">
         {products?.map((product) => (
           <Product key={product._id} product={product} />
@@ -38,28 +37,7 @@ const Home = ({ products, discProducts, bannerData1, bannerData2 }) => {
       </div>
       <Banner2 banner2={bannerData2.length && bannerData2[0]} />
       <br />
-      {/* <div className="mt-[-120px] md:mt-0 md:ml-[100px] text-center w-full px-2 md:px-0 md:w-[90%] rounded-lg md:rounded-full h-[130px] md:h-[150px] bg-purple-400 shadow-lg shadow-purple-300">
-        <h1 className=" rowdies mt-[5px] md:mt-[15px] text-[20px] text-center md:text-[40px] text-purple-700 font-bold">
-          From Original Ideas to anything you can Imagine
-        </h1>
-        <Link href="/about">
-          <button
-            className="rowdies bg-black text-purple-400 font-bold px-[15px] md:px-[20px] rounded-lg py-[5px] text-[17px] md:text-[25px] mt-[15px]"
-            type="button"
-          >
-            Read Our Story
-          </button>
-        </Link>
-      </div> */}
-
-      <div className="bg-transparent text-left ml-[20px] md:ml-[200px] mt-[-50px] md:mt-[100px]">
-        <h2 className=" text-[55px] md:text-[65px] font-bold lobster text-purple-600">
-          On Sale
-        </h2>
-        <p className="text-white font-bold mt-[-5px] rowdies text-[20px] md:text-[25px]">
-          Deals you can't miss!
-        </p>
-      </div>
+      <DiscProd discprod={discProd.length && discProd[0]} />
       <div className="grid grid-cols-2 md:flex flex-wrap justify-center w-full mt-[20px] bg-transparent">
         {discProducts?.map((discproduct) => (
           <DiscProduct key={discproduct._id} discproduct={discproduct} />
@@ -83,12 +61,28 @@ export const getServerSideProps = async () => {
   const bannerQuery2 = '*[_type == "banner2"]';
   const bannerData2 = await client.fetch(bannerQuery2);
 
+  const query2 = '*[_type == "aboutbanner1"]'; // grab all products from sanity
+  const aboutbanner1 = await client.fetch(query2);
+
+  const query3 = '*[_type == "mainprod"]'; // grab all products from sanity
+  const mainProd = await client.fetch(query3);
+
+  const query4 = '*[_type == "discprod"]'; // grab all products from sanity
+  const discProd = await client.fetch(query4);
+
+  const query5 = '*[_type == "maintitle"]'; // grab all products from sanity
+  const mainTitle = await client.fetch(query5);
+
   return {
     props: {
       products,
       discProducts,
       bannerData1,
       bannerData2,
+      aboutbanner1,
+      mainProd,
+      discProd,
+      mainTitle,
     },
   };
 };

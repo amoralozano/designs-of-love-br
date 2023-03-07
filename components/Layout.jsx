@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
           href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
           rel="stylesheet"
         />
-        <title>Ecommerce store</title>
+        <title>Designs OLBR</title>
       </Head>
       <header>
         <br />

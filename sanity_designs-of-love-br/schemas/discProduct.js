@@ -37,6 +37,16 @@ export default {
       type: 'string',
     },
     {
+      name: 'materials',
+      title: 'Materials',
+      type: 'string',
+    },
+    {
+      name: 'shipping',
+      title: 'Shipping',
+      type: 'string',
+    },
+    {
       name: 'smallDetails',
       title: 'SmallDetails',
       type: 'string',

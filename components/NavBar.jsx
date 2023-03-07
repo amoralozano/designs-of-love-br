@@ -4,6 +4,7 @@ import { AiOutlineShopping } from "react-icons/ai";
 import Cart from "./Cart";
 import logo from "../images/logo.png";
 import Image from "next/image";
+import { UserButton } from "@clerk/nextjs";
 
 import { Dropdown } from "flowbite-react";
 import { Navbar } from "flowbite-react";
@@ -89,13 +90,16 @@ const NavBar = () => {
               <li className="text-black font-extrabold text-xl border-gray-100 dark:text-black">
                 <a href="/collection">Our Collection</a>
               </li>
+              <li className="">
+                <UserButton />
+              </li>
             </ul>
           </div>
           {showCart && <Cart />}
           <div class=" order-2 bg-transparent ml-[360px] md:ml-[400px] mt-[-70px] mb-[20px] md:mt-[-30px] md:h-[30px] w-[30px] md:w-[30px]">
             <button
               type="button"
-              className="text-[25px] ml-[0px] md:mt-[0px] text-black cursor-pointer relative ease-in-out bg-transparent"
+              className="text-[25px] md:ml-[30px] md:mt-[0px] text-black cursor-pointer relative ease-in-out bg-transparent"
               onClick={() => setShowCart(true)}
             >
               <AiOutlineShopping />
