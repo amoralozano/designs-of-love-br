@@ -14,10 +14,11 @@ import {
 
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
+  const clerkFrontEndApi = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
   const isPublicRoute = ["/", "/collection", "/about"].includes(pathname);
   return (
     // first part ClerkProvider is going to be changed for it to read the publishable key(watch video.) // try redeploying and change the domain name to custom one and try to make it all work together
-    <ClerkProvider {...pageProps}>
+    <ClerkProvider frontendApi={clerkFrontEndApi} {...pageProps}>
       {isPublicRoute ? (
         <StateContext>
           <Layout>
