@@ -51,7 +51,7 @@ const DiscProductDetails = ({ discproduct, discproducts }) => {
       desc: [materials],
     },
     {
-      title: "Shipping",
+      title: "Shipping!",
       desc: [shipping],
     },
   ];
