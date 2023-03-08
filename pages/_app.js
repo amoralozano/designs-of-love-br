@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
   const isPublicRoute = ["/", "/collection", "/about"].includes(pathname);
   return (
+    // first part ClerkProvider is going to be changed for it to read the publishable key(watch video.) // try redeploying and change the domain name to custom one and try to make it all work together
     <ClerkProvider {...pageProps}>
       {isPublicRoute ? (
         <StateContext>
