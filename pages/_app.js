@@ -12,13 +12,14 @@ import {
   RedirectToSignIn,
 } from "@clerk/nextjs";
 
+// even with publishable key is given it still does not read it for some reason.
+
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
-  // const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY; // sign in isnt loading cause i think im using the deployment keys and not test
+  const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY; // sign in isnt loading cause i think im using the deployment keys and not test
   const isPublicRoute = ["/", "/collection", "/about"].includes(pathname);
   return (
-    // first part ClerkProvider is going to be changed for it to read the publishable key(watch video.) // try redeploying and change the domain name to custom one and try to make it all work together
-    <ClerkProvider {...pageProps}>
+    <ClerkProvider publishableKey={publishableKey} {...pageProps}>
       {isPublicRoute ? (
         <StateContext>
           <Layout>
