@@ -15,10 +15,11 @@ import {
 // even with publishable key is given it still does not read it for some reason.
 
 function MyApp({ Component, pageProps }) {
-  const NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = (key =
-    pk_live_Y2xlcmsuZGVzaWducy1vZi1sb3ZlLW9saHdpaWFvbi1hbW9yYWxvemFuby52ZXJjZWwuYXBwJA);
   const { pathname } = useRouter();
-  const publishableKey = NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY; // sign in isnt loading cause i think im using the deployment keys and not test
+  const publishableKey = `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = 
+  pk_live_Y2xlcmsuZGVzaWducy1vZi1sb3ZlLW9saHdpaWFvbi1hbW9yYWxvemFuby52ZXJjZWwuYXBwJA`;
+
+  // sign in isnt loading cause i think im using the deployment keys and not test
   const isPublicRoute = ["/", "/collection", "/about"].includes(pathname);
   return (
     <ClerkProvider publishableKey={publishableKey} {...pageProps}>
