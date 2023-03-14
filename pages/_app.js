@@ -16,13 +16,15 @@ import {
 
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
-  const publishableKey = `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = 
-  pk_live_Y2xlcmsuZGVzaWducy1vZi1sb3ZlLW9saHdpaWFvbi1hbW9yYWxvemFuby52ZXJjZWwuYXBwJA`;
 
-  // sign in isnt loading cause i think im using the deployment keys and not test
+  // publishableKey = process.env.EXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+
   const isPublicRoute = ["/", "/collection", "/about"].includes(pathname);
   return (
-    <ClerkProvider publishableKey={publishableKey} {...pageProps}>
+    <ClerkProvider
+      publishableKey="pk_live_Y2xlcmsuZGVzaWducy1vZi1sb3ZlLW9saHdpaWFvbi1hbW9yYWxvemFuby52ZXJjZWwuYXBwJA"
+      {...pageProps}
+    >
       {isPublicRoute ? (
         <StateContext>
           <Layout>
