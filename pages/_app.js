@@ -12,17 +12,15 @@ import {
   RedirectToSignIn,
 } from "@clerk/nextjs";
 
-// even with publishable key is given it still does not read it for some reason.
+// figure put if i need to buy the domain to configure the dns settings for the website, if so record date to charge on that date.
 
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
 
-  // publishableKey = process.env.EXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
-
   const isPublicRoute = ["/", "/collection", "/about"].includes(pathname);
   return (
     <ClerkProvider
-      publishableKey="pk_live_Y2xlcmsuZGVzaWducy1vZi1sb3ZlLW9saHdpaWFvbi1hbW9yYWxvemFuby52ZXJjZWwuYXBwJA"
+      publishableKey="pk_live_Y2xlcmsuZGVzaWdub2Zsb3ZlYnIuY29tJA"
       {...pageProps}
     >
       {isPublicRoute ? (
