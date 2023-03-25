@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
   const isPublicRoute = ["/", "/collection", "/about"].includes(pathname);
   return (
     <ClerkProvider
-      publishableKey="pk_live_Y2xlcmsuZGVzaWdub2Zsb3ZlYnIuY29tJA"
+      publishable_key="pk_live_Y2xlcmsuZGVzaWdub2Zsb3ZlYnIuY29tJA"
       {...pageProps}
     >
       {isPublicRoute ? (
