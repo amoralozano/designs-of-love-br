@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.20.7",
+    "@clerk/clerk-sdk-node": "^4.7.16",
     "@clerk/nextjs": "^4.11.3",
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
