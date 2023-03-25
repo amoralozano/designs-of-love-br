@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
   const isPublicRoute = ["/", "/collection", "/about"].includes(pathname);
   return (
     <ClerkProvider
-      frontendApi="pk_live_Y2xlcmsuZGVzaWdub2Zsb3ZlYnIuY29tJA"
+      frontendApi="sk_live_Dz309dpfZxqRZ5uvNHxu4OQsPvzRX0zFDDPGffa6DW"
       {...pageProps}
     >
       {isPublicRoute ? (
