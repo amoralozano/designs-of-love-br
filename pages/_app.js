@@ -16,11 +16,13 @@ import {
 
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
-  const PublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
   const isPublicRoute = ["/", "/collection", "/about"].includes(pathname);
   return (
-    <ClerkProvider {...pageProps} publishableKey={PublishableKey}>
+    <ClerkProvider
+      {...pageProps}
+      publishableKey="pk_live_Y2xlcmsuZGVzaWdub2Zsb3ZlYnIuY29tJA"
+    >
       {isPublicRoute ? (
         <StateContext>
           <Layout>
