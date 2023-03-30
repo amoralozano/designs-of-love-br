@@ -1,4 +1,4 @@
-import clerk from "../clerk";
+import clerk from "./clerk";
 
 const requireAuth = (handler) => async (req, res) => {
   try {
