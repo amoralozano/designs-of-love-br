@@ -1,18 +1,11 @@
-import clerk from "./clerk";
+import { withClerkMiddleware } from "@clerk/nextjs/server";
+import { NextResponse } from "next/server";
 
-const requireAuth = (handler) => async (req, res) => {
-  try {
-    const { user } = await clerk.session.checkAuth({
-      required: true,
-      res,
-      req,
-    });
-    req.user = user;
-    return handler(req, res);
-  } catch (error) {
-    console.log(error);
-    res.status(401).json({ error: "Not authorized" });
-  }
+export default withClerkMiddleware((req) => {
+  return NextResponse.next();
+});
+
+// Stop Middleware running on static files
+export const config = {
+  matcher: "/((?!_next/image|_next/static|favicon.ico).*)",
 };
-
-export default requireAuth;
