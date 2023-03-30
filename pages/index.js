@@ -23,6 +23,11 @@ const Home = ({
 }) => {
   return (
     <div className=" bg-black mb-[100px]">
+      <div className="w-full h-[60px] flex items-center justify-center bg-pink-200">
+        <h1 className="text-[18px] font-bold textv-white">
+          This is Version 1.0 more updates & features will roll troughout.
+        </h1>
+      </div>
       <br />
       <MainTitle maintitle={mainTitle.length && mainTitle[0]} />
       <div className="">
