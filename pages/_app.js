@@ -22,6 +22,7 @@ function MyApp({ Component, pageProps }) {
     <ClerkProvider
       {...pageProps}
       publishableKey="pk_live_Y2xlcmsuZGVzaWdub2Zsb3ZlYnIuY29tJA"
+      // publishableKey="pk_test_d2VhbHRoeS1iZWRidWctNTAuY2xlcmsuYWNjb3VudHMuZGV2JA"
       // this is not being read again... probaboly go back to development, figure out if same error perdsist.
     >
       {isPublicRoute ? (

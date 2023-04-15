@@ -177,17 +177,17 @@ const ProductDetails = ({ product, products }) => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-gray-900 h-[1200px] md:h-[700px] text-center md:text-left lg:text-center mt-[220px] md:mt-[200px]">
-        <h1 className="lobster text-[55px] md:text-[70px] md:mr-[50px] font-bold text-pink-500">
+      <div className="w-full bg-gray-900 h-[1400px] md:h-[700px] text-center md:text-left lg:text-left mt-[220px] md:mt-[200px]">
+        <h1 className="lobster text-[55px] md:text-[70px] md:mr-[50px] lg:ml-[30px] font-bold text-pink-500">
           What Others Love
         </h1>
-        <p className=" rowdies font-bold md:ml-[20px] text-white text-[20px]">
+        <p className=" rowdies font-bold md:ml-[20px] text-white text-[20px] lg:ml-[50px]">
           and you might as well
         </p>
 
-        <div className="bg-transparent md:mt-[50px] w-[80%] md:ml-[90px] lg:ml-[250px] px-2 rounded-lg">
-          <div className="h-[500px] relative mr-[40px]">
-            <div className="grid grid-cols-1 ml-[100px] md:ml-[-120px] md:flex hover md:justify-center md:absolute mt-[5px]">
+        <div className="bg-transparent md:mt-[0px] w-[80%] md:ml-[90px] lg:ml-[250px] px-2 rounded-lg">
+          <div className="h-[500px] relative mr-[40px] md:mr-[0px]">
+            <div className="grid grid-cols-1 ml-[100px] md:ml-[-290px] md:flex hover md:justify-center md:absolute mt-[5px]">
               {products.map(
                 (item, index) =>
                   index < 3 && <Product key={item._id} product={item} /> // I made it to where only 3 show instead of the scrolling.

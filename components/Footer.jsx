@@ -4,6 +4,7 @@ import Image from "next/image";
 import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { FaTiktok } from "react-icons/fa";
 import { BsFacebook } from "react-icons/bs";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -38,7 +39,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="mt-[15px]">
-                <a href="https://tailwindcss.com/" className="hover:underline">
+                <a href="/collection" className="hover:underline">
                   On Special
                 </a>
               </li>
@@ -50,25 +51,29 @@ const Footer = () => {
             </h2>
             <ul class="text-white dark:text-gray-400">
               <li class="mb-4">
-                <a
-                  href="https://github.com/themesberg/flowbite"
-                  class="hover:underline "
-                >
+                <a href="/" class="hover:underline ">
                   Facebook
                 </a>
               </li>
               <li>
-                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">
-                  Instagram
-                </a>
+                <Link
+                  legacyBehavior
+                  href="https://www.instagram.com/designs_of_love_by_ruth/?igshid=YmMyMTA2M2Y%3D"
+                >
+                  <a target="_blank" class="hover:underline">
+                    Instagram
+                  </a>
+                </Link>
               </li>
               <li className="mt-[15px]">
-                <a
-                  href="https://discord.gg/4eeurUVvTy"
-                  className="hover:underline"
+                <Link
+                  legacyBehavior
+                  href="https://www.tiktok.com/@ruthhol67?_t=8bWhwfCwB0k&_r=1"
                 >
-                  TikTok
-                </a>
+                  <a target="_blank" className="hover:underline">
+                    TikTok
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -80,11 +85,6 @@ const Footer = () => {
               <li class="mb-4">
                 <a href="#" class="hover:underline">
                   Email
-                </a>
-              </li>
-              <li>
-                <a href="#" class="hover:underline">
-                  WhatsApp
                 </a>
               </li>
             </ul>
