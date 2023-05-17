@@ -8,7 +8,7 @@ const FounderBanner = ({ founderbanner: { title, desc, image } }) => {
       <div className="md:w-[80%] md:ml-[20px] h-[600px] bg-pink-300 rounded-xl ">
         <Image
           className="w-full md:w-full lg:w-[80%] lg:h-[80%] lg:ml-[50px] lg:mt-[50px] md:h-[550px] bg-green-200 rounded-lg"
-          src={mystoryimage}
+          src={image} // changed to image for it to change dynamically
         />
       </div>
       <div className=" overflow-auto md:overflow-auto rounded-xl h-[250px] md:h-[320px] mt-[-180px] md:mt-[100px] lg:w-[80%] lg:ml-[-50px] lg:mr-[20px]  bg-pink-500 shadow-lg shadow-pink-500 ">

@@ -86,7 +86,7 @@ const ProductDetails = ({ product, products }) => {
             </div>
           </div>
         </div>
-        <div className=" grid grid-cols-3 md:grid-cols-1 md:flex-row-1 md:align-middle bg-transparent md:bg-black w-[80%]  md:w-[30%] h-[100px] md:h-[350px] md:gap-[10px] mt-[20px] md:mt-[70px] ml-[40px] md:ml-[50px] ">
+        <div className=" grid grid-cols-3 overflow-y-auto md:grid-cols-1 md:overflow-y-auto md:align-middle bg-transparent md:bg-gray-900 w-[80%]  md:w-[30%] h-[100px] md:h-[350px] md:gap-[10px] mt-[20px] md:mt-[70px] ml-[40px] md:ml-[50px] ">
           {image?.map((item, i) => (
             <img
               key={i}

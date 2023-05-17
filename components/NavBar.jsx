@@ -20,7 +20,7 @@ const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <nav className="w-full bg-gradient-to-r from-pink-400 to-pink-600 border-gray-200 px-2 sm:px-4 py-[1px] mt-[-30px] rounded dark:bg-white">
+    <nav className="w-full bg-gradient-to-r from-pink-400 to-pink-500 border-gray-200 px-2 sm:px-4 py-[1px] mt-[-30px] rounded dark:bg-white">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">

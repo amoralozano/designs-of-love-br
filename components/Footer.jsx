@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer class="p-4 bg-transparent sm:p-6 mt-[500px] lg:mt-[300px] ">
+    <footer class="p-4 bg-transparent sm:p-6 mt-[200px] lg:mt-[300px] ">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
           <a href="https://flowbite.com/" class="flex items-center">
