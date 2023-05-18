@@ -14,7 +14,7 @@ const Product = ({
   product: { image, name, slug, price, smallDetails, materials, shipping },
 }) => {
   return (
-    <div className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:bg-pink-500 bg-black rounded-lg w-[200px] md:w-[350px] ml-[10px]  md:ml-[50px] mt-[40px]">
+    <div className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:bg-pink-500 bg-black rounded-lg w-[200px] md:w-[350px] ml-[10px]  md:ml-[50px] mt-[40px] ">
       <Link href={`/product/${slug.current}`}>
         <div className="mb-[10px]">
           <img

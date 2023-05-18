@@ -57,11 +57,11 @@ const ProductDetails = ({ product, products }) => {
   return (
     <div className="w-full mb-[200px] md:mb-[100px]">
       <br />
-      <div className=" md:flex w-full h-[1200px] md:h-[800px]  md:ml-[-100px] bg-black">
+      <div className=" md:flex w-full h-[1200px] md:h-[800px] md:ml-[-100px] lg:ml-[-100px] xl:ml-[-300px] bg-black">
         <h1 className="visible md:invisible text-center w-full text-[50px] md:text-[60px] mt-[-30px] rowdies font-bold text-white ">
           {name}
         </h1>
-        <div className="bg-black md:bg-black ml-[60px] md:ml-[-30px] mt-[30px] md:mt-[50px] h-[300px] w-[300px] md:w-[500px] md:h-[400px] ">
+        <div className="bg-black md:bg-black ml-[60px] md:ml-[-30px] lg:ml-[-150px] xl:ml-[-30px] mt-[30px] md:mt-[50px] h-[300px] w-[300px] md:w-[500px] md:h-[400px] ">
           <img
             className="bg-white rounded-lg md:ml-[15px] mt-[15px] w-[300px] h-[300px] md:w-[500px] md:h-[400px]  duration-3000"
             src={urlFor(image && image[index])}
@@ -86,7 +86,7 @@ const ProductDetails = ({ product, products }) => {
             </div>
           </div>
         </div>
-        <div className=" grid grid-cols-3 overflow-y-auto md:grid-cols-1 md:overflow-y-auto md:align-middle bg-transparent md:bg-gray-900 w-[80%]  md:w-[30%] h-[100px] md:h-[350px] md:gap-[10px] mt-[20px] md:mt-[70px] ml-[40px] md:ml-[50px] ">
+        <div className=" grid grid-cols-3 overflow-y-auto md:grid-cols-1 md:overflow-y-auto md:align-middle bg-transparent md:bg-gray-900 w-[80%]  md:w-[30%] lg:w-[20%] xl:w-[15%] h-[100px] md:h-[350px] md:gap-[10px] mt-[20px] md:mt-[70px] ml-[40px] md:ml-[50px] ">
           {image?.map((item, i) => (
             <img
               key={i}
@@ -177,20 +177,20 @@ const ProductDetails = ({ product, products }) => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-gray-900 h-[1400px] md:h-[700px] text-center md:text-left lg:text-left mt-[220px] md:mt-[200px]">
-        <h1 className="lobster text-[55px] md:text-[70px] md:mr-[50px] lg:ml-[30px] font-bold text-pink-500">
+      <div className="w-full bg-gray-900 h-[1400px] md:h-[700px] lg:h-[1200px] xl:h-[700px] text-center md:text-left lg:text-left mt-[220px] md:mt-[200px]">
+        <h1 className="lobster text-[55px] md:text-[70px] md:mr-[50px] lg:ml-[280px] xl:ml-[30px] font-bold text-pink-500">
           What Others Love
         </h1>
-        <p className=" rowdies font-bold md:ml-[20px] text-white text-[20px] lg:ml-[50px]">
+        <p className=" rowdies font-bold md:ml-[20px] text-white text-[20px] lg:ml-[430px] xl:ml-[50px]">
           and you might as well
         </p>
 
         <div className="bg-transparent md:mt-[0px] w-[80%] md:ml-[90px] lg:ml-[250px] px-2 rounded-lg">
-          <div className="h-[500px] relative mr-[40px] md:mr-[0px]">
-            <div className="grid grid-cols-1 ml-[100px] md:ml-[-290px] md:flex hover md:justify-center md:absolute mt-[5px]">
+          <div className="h-[500px] relative mr-[40px] md:mr-[0px] ">
+            <div className="grid grid-cols-1 ml-[100px] md:ml-[-290px] lg:ml-[-130px] xl:ml-[-250px] md:flex hover md:justify-center md:absolute lg:grid lg:grid-cols-2 xl:flex xl:justify-center mt-[5px]">
               {products.map(
                 (item, index) =>
-                  index < 3 && <Product key={item._id} product={item} /> // I made it to where only 3 show instead of the scrolling.
+                  index < 4 && <Product key={item._id} product={item} /> // I made it to where only 3 show instead of the scrolling.
               )}
             </div>
           </div>

@@ -8,9 +8,9 @@ const AboutBanner3 = ({ aboutbanner3: { image, desc } }) => {
       {" "}
       <img
         src={urlFor(image && image[0])}
-        className="w-[400px] h-[360px] ml-[15px] md:ml-[280px] md:w-[780px] md:h-[450px] bg-green-200 rounded-xl"
+        className="w-[400px] h-[360px] ml-[15px] md:ml-[280px] lg:ml-[130px] xl:ml-[280px] md:w-[780px] md:h-[450px] bg-green-200 rounded-xl"
       />
-      <div className=" relative w-[390px] h-[340px] mr-[10px] md:w-[750px] md:h-[250px] ml-[20px] md:ml-[300px] mt-[-50px] md:mt-[50px] rounded-lg bg-pink-500 border-2 border-pink-500 shadow-lg shadow-pink-500">
+      <div className=" relative w-[390px] h-[340px] mr-[10px] md:w-[750px] md:h-[250px] ml-[20px] md:ml-[300px] lg:ml-[140px] xl:ml-[300px] mt-[-50px] md:mt-[50px] rounded-lg bg-pink-500 border-2 border-pink-500 shadow-lg shadow-pink-500">
         <h1 className=" mt-[20px] text-white text-[22px] md:text-[24px] text-center md:text-left  w-[80%] md:w-[85%] ml-[40px] md:ml-[50px] md:mt-[20px] md:py-3">
           {desc}
         </h1>

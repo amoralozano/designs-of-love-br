@@ -12,13 +12,13 @@ const AboutBanner1 = ({ aboutbanner1: { image, desc } }) => {
           <div className=" md:flex md:items-center md:justify-center w-full md:w-[50%] h-full ">
             <img
               src={urlFor(image && image[0])}
-              className="w-[350px] h-[300px] md:w-[90%] md:h-[90%] ml-[10px] md:ml-0 bg-white rounded-lg md:shadow-lg md:shadow-pink-300 "
+              className="w-[350px] h-[300px] md:w-[90%] md:h-[90%] lg:h-[75%] xl:h-[90%] ml-[10px] md:ml-0 lg:ml-[-80px] xl:ml-0 bg-white rounded-lg md:shadow-lg md:shadow-pink-300 "
             />
           </div>
           <div className=" md:flex md:items-center md:justify-center w-full h-full md:w-[50%] md:h-full">
-            <div className=" flex items-center justify-center ml-[-10px] md:ml-[10px] w-[400px] h-[170px] md:w-[95%] md:h-[60%] mt-[-200px] md:mt-0 rounded-xl bg-pink-500 shadow-lg shadow-pink-500">
+            <div className=" flex items-center justify-center ml-[-10px] md:ml-[10px] w-[400px] h-[170px] md:w-[95%] lg:w-[100%] xl:w-[95%] md:h-[60%] mt-[-200px] md:mt-0 lg:ml-[-50px] xl:ml-0 rounded-xl bg-pink-500 shadow-lg shadow-pink-500">
               <div className="w-full flex items-center justify-center h-[70%] ">
-                <h1 className=" text-[18px] md:text-[18px] lg:text-[25px] text-white w-[90%] text-center md:text-left font-bold">
+                <h1 className=" text-[18px] md:text-[18px] lg:text-[20px] xl:text-[25px] text-white w-[90%] text-center md:text-left font-bold">
                   {desc}
                 </h1>
               </div>

@@ -36,8 +36,7 @@ const about = ({
 }) => {
   return (
     <div className="w-full bg-black mb-[200px] md:mb-[800px]">
-      <br />
-      <div className="mt-[50px] w-full md:w-full md:ml-[100px] lg:ml-[]">
+      <div className=" w-full md:w-full md:ml-[100px] lg:ml-[]">
         <FounderBanner
           founderbanner={foundersbanner.length && foundersbanner[0]}
         />
