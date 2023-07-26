@@ -21,8 +21,9 @@ const Home = ({
   discProd,
   mainTitle,
 }) => {
+  // chnage the background to black if needed
   return (
-    <div className=" bg-black mb-[100px]">
+    <div className="bg-white mb-[-200px] md:mb-[100px]">
       {/* <div className="w-full h-[60px] flex items-center justify-center bg-pink-200">
         <h1 className="text-[18px] font-bold textv-white">
           This is Version 1.0 more updates & features will roll troughout.
@@ -33,21 +34,27 @@ const Home = ({
       <div className="">
         <HeroBanner heroBanner={bannerData1.length && bannerData1[0]} />
       </div>
-      {console.log(bannerData1)}
+
       <MainProd mainprod={mainProd.length && mainProd[0]} />
-      <div className="grid grid-cols-2 md:flex flex-wrap justify-center w-full mt-[20px] bg-transparent">
+      {/*  <div className="md:grid md:grid-cols-1 lg:space-x-[60px] md:flex flex-wrap justify-center w-full mt-[20px] bg-green-300">
+        {products?.map((product) => (
+          <Product key={product._id} product={product} />
+        ))}
+      </div>  */}
+      <div className="flex items-center h-[420px] md:h-full overflow overflow-y-hidden overflow-x-auto no-scrollbar space-x-[30px] md:space-x-[50px] md:space-y-[25px] lg:grid lg:grid-cols-4 w-full md:w-[95%] lg:w-[95%] mt-[20px] md:ml-[50px] mb-[100px]">
         {products?.map((product) => (
           <Product key={product._id} product={product} />
         ))}
       </div>
-      <Banner2 banner2={bannerData2.length && bannerData2[0]} />
-      <br />
       <DiscProd discprod={discProd.length && discProd[0]} />
-      <div className="grid grid-cols-2 md:flex flex-wrap justify-center w-full mt-[20px] bg-transparent">
+      <div className="flex items-center h-[420px] md:h-full overflow overflow-y-hidden overflow-x-auto no-scrollbar space-x-[30px] md:space-x-[20px] md:space-y-[25px] md:grid md:grid-cols-4 w-full md:w-[95%] mt-[20px] md:ml-[50px] mb-[100px] ">
         {discProducts?.map((discproduct) => (
           <DiscProduct key={discproduct._id} discproduct={discproduct} />
         ))}
       </div>
+
+      <br />
+      <Banner2 banner2={bannerData2.length && bannerData2[0]} />
       <br />
     </div>
   );

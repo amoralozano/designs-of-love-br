@@ -20,7 +20,7 @@ const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <nav className="w-full bg-gradient-to-r from-pink-400 to-pink-500 border-gray-200 px-2 sm:px-4 py-[1px] mt-[-30px] rounded dark:bg-white">
+    <nav className="w-full bg-gradient-to-b from-pink-500 to-white border-gray-200 px-2 sm:px-4 py-[1px] mt-[-30px] rounded dark:bg-white">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -38,7 +38,7 @@ const NavBar = () => {
             </div>
             <div className="md:hidden">
               <button
-                className="p-2  mt-[-10px] mr-[40px] md:mr-[0px] md:mt-[0px] text-pink-300 rounded-md outline-none focus:border-gray-400 focus:border"
+                className="p-2  mt-[-10px] mr-[40px] md:mr-[0px] md:mt-[0px] text-white rounded-md outline-none focus:border-gray-400 focus:border"
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (

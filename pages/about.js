@@ -35,7 +35,10 @@ const about = ({
   foundersbanner,
 }) => {
   return (
-    <div className="w-full bg-black mb-[200px] md:mb-[800px]">
+    <div className="w-full bg-white mb-[200px] md:mb-[800px]">
+      <h1 className="text-center visible md:invisible lg:invisible mt-[30px]  lg:mt-0 text-[35px] font-bold lobster">
+        Un Poco de mi Historia
+      </h1>
       <div className=" w-full md:w-full md:ml-[100px] lg:ml-[]">
         <FounderBanner
           founderbanner={foundersbanner.length && foundersbanner[0]}
@@ -102,14 +105,20 @@ const about = ({
         </div> */}
       </div>
       <br />
-      <div className=" mt-[-250px] ml-[25px] md:ml-0 md:mt-[70px] w-full bg-black">
-        <AboutBanner1 aboutbanner1={aboutbanners1.length && aboutbanners1[0]} />
+      <div className="bg-pink-500 md-bg-white">
+        <div className=" mt-[-250px] ml-[0px] md:ml-0 md:mt-[70px] w-full bg-black">
+          <AboutBanner1
+            aboutbanner1={aboutbanners1.length && aboutbanners1[0]}
+          />
+        </div>
+        <br />
+        <br />
+        <PurpBanner purpbanner={purpbanner1.length && purpbanner1[0]} />
       </div>
       <br />
-      <br />
-      <PurpBanner purpbanner={purpbanner1.length && purpbanner1[0]} />
-      <br />
-      <div className="w-full h-[1200px] bg-transparent mt-[-20px] md:mt-0 mb-[50px]">
+      <div className="w-full h-[1200px] lg:h-[1800px] mt-[-200px] lg:mt-[-230px] md:mt-0 mb-[200px] lg:mb-0 bg-gradient-to-b from-pink-500 to-white">
+        <br />
+        <br />
         <AboutBanner2 aboutbanner2={aboutbanners2.length && aboutbanners2[0]} />
 
         <br />

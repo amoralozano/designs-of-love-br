@@ -2,11 +2,11 @@ import React from "react";
 
 const MainProd = ({ mainprod: { title, smalltitle } }) => {
   return (
-    <div className="bg-transparent text-left ml-[20px] md:ml-[200px] mt-[-50px] md:mt-[100px]">
-      <h2 className=" text-[50px] md:text-[80px] lobster font-bold text-pink-600">
+    <div className=" text-left ml-[20px] lg:ml-[200px] xl:ml-[0px] mt-[-20px] md:mt-[100px]">
+      <h2 className=" text-[50px] md:text-[80px] lobster font-bold xl:ml-[50px] text-pink-500">
         {title}
       </h2>
-      <p className="text-white font-bold mt-[-5px] rowdies text-[20px] md:text-[25px]">
+      <p className="text-black font-bold mt-[-5px] rowdies text-[20px] xl:ml-[80px] md:text-[25px]">
         {smalltitle}
       </p>
     </div>

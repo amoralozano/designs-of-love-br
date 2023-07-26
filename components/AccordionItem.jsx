@@ -6,7 +6,7 @@ const AccordionItem = ({ open, toggle, title, desc }) => {
   return (
     <div className="pt-[10px] w-full md:w-[410px] mr-[0px] md:mr-[55px]">
       <div
-        className="bg-black border-2 text-pink-400 border-pink-400 rounded-lg py-[10px] md:py-[15px] px-[30px] flex justify-between items-center cursor-pointer"
+        className="bg-black shadow-md shadow-pink-400 text-pink-400 rounded-lg py-[10px] md:py-[15px] px-[30px] h-[50px] flex justify-between items-center cursor-pointer"
         onClick={toggle}
       >
         <p className="text-[25px] text-white text-center font-bold lobster">

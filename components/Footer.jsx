@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer class="p-4 bg-transparent sm:p-6 mt-[200px] lg:mt-[300px] ">
+    <footer class="p-4 bg-transparent sm:p-6 mt-[200px] lg:mt-[-200px] ">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
           <a href="https://flowbite.com/" class="flex items-center">
@@ -17,7 +17,7 @@ const Footer = () => {
               className="w-[60px] mr-[10px]"
               alt="FlowBite Logo"
             />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-black">
               Designs Of Love By Ruth
             </span>
           </a>
@@ -27,7 +27,7 @@ const Footer = () => {
             <h2 class="mb-6 text-[17px] font-bold  text-pink-400 uppercase dark:text-white">
               By Love
             </h2>
-            <ul class="text-white dark:text-gray-400">
+            <ul class="text-black dark:text-gray-400">
               <li class="mb-4">
                 <a href="/about" class="hover:underline">
                   Our Story
@@ -49,7 +49,7 @@ const Footer = () => {
             <h2 class="mb-6 text-[17px] font-bold text-pink-400 uppercase dark:text-white">
               Follow us
             </h2>
-            <ul class="text-white dark:text-gray-400">
+            <ul class="text-black dark:text-gray-400">
               <li class="mb-4">
                 <a href="/" class="hover:underline ">
                   Facebook
@@ -81,7 +81,7 @@ const Footer = () => {
             <h2 class="mb-6 text-[17px] font-bold text-pink-400 uppercase dark:text-white">
               Contact Us
             </h2>
-            <ul class="text-white dark:text-gray-400">
+            <ul class="text-black dark:text-gray-400">
               <li class="mb-4">
                 <a href="#" class="hover:underline">
                   Email
@@ -93,7 +93,7 @@ const Footer = () => {
       </div>
       <hr class="my-6 border-pink-300 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-between">
-        <span class="text-sm text-white sm:text-center dark:text-gray-400">
+        <span class="text-sm text-black sm:text-center dark:text-gray-400">
           © 2023{" "}
           <a href="https://flowbite.com/" class="hover:underline">
             Designs Of Love By Ruth™
@@ -103,7 +103,7 @@ const Footer = () => {
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <a
             href="#"
-            class="text-white hover:text-gray-900 dark:hover:text-white"
+            class="text-black hover:text-gray-900 dark:hover:text-black"
           >
             <svg
               class="w-5 h-5"
@@ -119,10 +119,7 @@ const Footer = () => {
             </svg>
             <span class="sr-only">Facebook page</span>
           </a>
-          <a
-            href="#"
-            class="text-white hover:text-gray-900 dark:hover:text-white"
-          >
+          <a href="#" class="text-black hover:text-black dark:hover:text-black">
             <svg
               class="w-5 h-5"
               fill="currentColor"
@@ -139,7 +136,7 @@ const Footer = () => {
           </a>
           <a
             href="#"
-            class="text-white hover:text-gray-900 dark:hover:text-white"
+            class="text-black hover:text-gray-900 dark:hover:text-black"
           >
             <svg
               class="w-5 h-5"

@@ -33,17 +33,18 @@ const collection = ({
   colMainBanners,
 }) => {
   return (
-    <div className="w-full bg-black mb-[200px]">
+    <div className="w-full bg-white mb-[200px]">
       <br />
       <ColMainBanner
         colmainbanner={colMainBanners.length && colMainBanners[0]}
       />
-      <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
-        <div className="w-full bg-black">
+      <div className=" flex justify-center mt-[0px] w-full bg-gradient-to-r from-pink-600 to-black">
+        <div className="w-full bg-gradient-to-b from-white to-pink-400">
           <br />
           <ColTitle coltitle={colTitles.length && colTitles[0]} />
 
-          <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-1">
+          {/* grid grid-rows-3 md:grid-cols-3 */}
+          <div className="flex items-center overflow-scroll overflow-y-hidden no-scrollbar  space-x-[60px] h-[400px] md:h-[500px]  ">
             {products?.map((product) => (
               <Product key={product._id} product={product} />
             ))}
@@ -57,12 +58,13 @@ const collection = ({
           Keep Scrolling... There is More
         </h1>
       </div> */}
-      <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
-        <div className="w-full bg-black">
+      <div className=" flex justify-center mt-[-30px] w-full bg-gradient-to-r from-pink-600 to-black">
+        <div className="w-full bg-gradient-to-b from-pink-400 to-white">
+          <br />
           <br />
           <ColTitle2 coltitle2={colTitles2.length && colTitles2[0]} />
 
-          <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-1">
+          <div className="flex items-center overflow-scroll overflow-y-hidden no-scrollbar  space-x-[60px] h-[400px] md:h-[500px]">
             {products2?.map((product) => (
               <Product key={product._id} product={product} />
             ))}
@@ -71,11 +73,12 @@ const collection = ({
         </div>
       </div>
       <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
-        <div className="w-full bg-black">
+        <div className="w-full bg-gradient-to-b from-white to-pink-400">
+          <br />
           <br />
           <ColTitle3 coltitle3={colTitles3.length && colTitles3[0]} />
 
-          <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-1">
+          <div className="flex items-center overflow-scroll overflow-y-hidden no-scrollbar  space-x-[60px] h-[400px] md:h-[500px]">
             {products3?.map((product) => (
               <Product key={product._id} product={product} />
             ))}
@@ -83,12 +86,13 @@ const collection = ({
           <br />
         </div>
       </div>
-      <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
-        <div className="w-full bg-black">
+      <div className=" flex justify-center mt-[0px] w-full bg-gradient-to-r from-pink-600 to-black">
+        <div className="w-full bg-gradient-to-b from-pink-400 to-white">
+          <br />
           <br />
           <ColTitle4 coltitle4={colTitles4.length && colTitles4[0]} />
 
-          <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-1">
+          <div className="flex items-center overflow-scroll overflow-y-hidden no-scrollbar  space-x-[60px] h-[400px] md:h-[500px]">
             {products4?.map((product) => (
               <Product key={product._id} product={product} />
             ))}
@@ -96,12 +100,13 @@ const collection = ({
           <br />
         </div>
       </div>
-      <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
-        <div className="w-full bg-black">
+      <div className=" flex justify-center mt-[0px] w-full bg-gradient-to-r from-pink-600 to-black">
+        <div className="w-full bg-gradient-to-b from-white to-pink-400">
+          <br />
           <br />
           <ColTitle5 coltitle5={colTitles5.length && colTitles5[0]} />
 
-          <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-1">
+          <div className="flex items-center overflow-scroll overflow-y-hidden no-scrollbar  space-x-[60px] h-[400px] md:h-[500px]">
             {products5?.map((product) => (
               <Product key={product._id} product={product} />
             ))}
@@ -109,11 +114,12 @@ const collection = ({
           <br />
         </div>
       </div>
-      <div className=" flex justify-center mt-[70px] w-full bg-gradient-to-r from-pink-600 to-black">
-        <div className="w-full bg-black">
+      <div className=" flex justify-center mt-[0px] w-full bg-gradient-to-r from-pink-600 to-black">
+        <div className="w-full bg-gradient-to-b from-pink-400 to-white">
+          <br />
           <br />
           <ColTitle6 coltitle6={colTitles6.length && colTitles6[0]} />
-          <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-1">
+          <div className="flex items-center overflow-scroll overflow-y-hidden no-scrollbar  space-x-[60px] h-[400px] md:h-[500px]">
             {products6?.map((product) => (
               <Product key={product._id} product={product} />
             ))}

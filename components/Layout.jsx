@@ -5,7 +5,7 @@ import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   return (
-    <div className="bg-black">
+    <div className="bg-white">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
         <br />
         <NavBar />
       </header>
-      <main className="w-full m-auto bg-black">{children}</main>
+      <main className="w-full m-auto bg-white">{children}</main>
       <footer>
         <Footer />
       </footer>
